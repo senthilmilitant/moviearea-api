@@ -1,53 +1,18 @@
-import express from "express"
-const app = express()
-const PORT = 3000
+import express from "express";
+import movieroutes from "./routes/movie.routes.js"; // Use the correct import
 
+const app = express();
+const PORT = 3000;
 
-app.get('/',(req,res)=>{
-    res.json ({message:"hello students"})
-})
-// CRUD functionality of movies
-//R - for reading movies
-app.get('/movies',(req,res)=>{
+app.use(express.json()); // Middleware to parse JSON
 
-})
+app.get("/", (req, res) => {
+  res.json({ message: "hello students" });
+});
 
-// c- for create movies
+// Use the router
+app.use("/movies", movieroutes);
 
-app.post('/movies',(req,res)=>{
-
-})
-
-//U - for update movies
-app.put('/movies /:id',(req,res)=>{
-
-  
-})
-
-
-// D - for delete movies
-app.delete('/movies',(req,res)=>{
-
-})
-
-
-
-
-app.listen(PORT,()=>{
-    console.log(`Example app listing on port ${PORT}`)
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`);
+});

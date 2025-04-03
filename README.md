@@ -12,3 +12,13 @@ reactjs app
 4`.npm add .`
 5.`git commit -m "your msg"`
 6.`git push -u origin main`
+
+
+
+# DATA BASE OPTION
+1.SQL - (mySQL,mariaDB,postgreSQL)
+2.NOSQL - mangoDB
+
+
+
+ty53nKnNUGOcWmEZ

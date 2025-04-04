@@ -1,10 +1,12 @@
 import express from "express";
-import { movieCreate, movieDelete, movieIndex, movieUpdate } from "./controller/movie.controller.js";
+import { movieCreate, movieDelete, movieIndex, movieUpdate, moviedetails } from "./controller/movie.controller.js";
 
 const route = express.Router(); // Call Router()
 
 // R - for reading movies
 route.get("/", movieIndex);
+
+route.get("/:id",moviedetails)
 
 // C - for create movies
 route.post("/",movieCreate);

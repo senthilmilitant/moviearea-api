@@ -5,7 +5,7 @@ const route = express.Router(); // Call Router()
 
 // R - for reading movies
 route.get("/", movieIndex);
-
+//reading one movie by id
 route.get("/:id",moviedetails)
 
 // C - for create movies

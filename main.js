@@ -5,16 +5,14 @@ import connectDB from "./LIB/db.js";
 const app = express();
 const PORT = 3000;
 
+
+ // Middleware to parse JSON
 app.use(express.json());
 app.use(express.urlencoded({extented:true}))
 
 
- // Middleware to parse JSON
 
 connectDB()
-
-
-
 
 app.get("/", (req, res) => {
   res.json({ message: "hello students" });
@@ -26,6 +24,15 @@ app.use("/movies", movieroutes);
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
+
+
+
+
+
+
+
+
+
 
 
 

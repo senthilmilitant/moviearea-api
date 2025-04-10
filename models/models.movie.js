@@ -15,7 +15,9 @@ const schema = new Schema({
     rating : {
         type: Number,
         required: true
-    }
+    },
+   
+    
 
 })
 

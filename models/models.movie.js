@@ -1,5 +1,4 @@
-import {  model, Schema } from "mongoose";
-
+import mongoose,{ Schema } from "mongoose";
 
 //write the schema
 const schema = new Schema({
@@ -17,13 +16,10 @@ const schema = new Schema({
         required: true
     },
    
-    
-
 })
-
 
 //creat your model
 
-const Movie = model("Movie",schema)
+const Movie = mongoose.model("Movie",schema)
 
 export default Movie

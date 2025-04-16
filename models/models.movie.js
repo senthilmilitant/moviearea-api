@@ -1,21 +1,22 @@
-import mongoose,{ Schema } from "mongoose";
+import mongoose,{ Schema  } from "mongoose";
 
 //write the schema
 const schema = new Schema({
     title: {
         type:String,
         required:true,
-        uniq :true
+        unique :true
     },
-    desc : {
+    description : {
         type: String,
-        required: true,
+        required: true
     },
     rating : {
         type: Number,
         required: true
     },
-   
+},{
+    versionKey:false
 })
 
 //creat your model

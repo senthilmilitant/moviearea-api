@@ -7,13 +7,13 @@ const PORT = 3000;
 
  // Middleware to parse JSON
 app.use(express.json());
-app.use(express.urlencoded({extended:true}))
+app.use(express.urlencoded({extended:false}))
 
 
 connectDB()
-
+//default route
 app.get("/", (req, res) => {
-  res.json({ message: "hello students" });
+  res.send(`<h1>Hello from node js!</h1>`);
 });
 
 // Use the router
